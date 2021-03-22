@@ -26,7 +26,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if !TARGET_OS_OSX
+#if TARGET_OS_IOS
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

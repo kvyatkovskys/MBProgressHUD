@@ -3,7 +3,7 @@
 // Version 1.2.0
 // Created by Matej Bukovinski on 2.4.09.
 //
-#if !TARGET_OS_OSX
+#if TARGET_OS_IOS 
 
 #import "MBProgressHUD.h"
 #import <tgmath.h>
