@@ -1,0 +1,33 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "MBProgressHUD-debug.module": ["<MBProgressHUD-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MBProgressHUD-debug.module>"]
+  "test": ["<MBProgressHUD-debug.module>"]
+default: "main"
+nodes:
+  "/Users/sergeikviatkovskii/MBProgressHUD/":
+    is-directory-structure: true
+commands:
+  "/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/MBProgressHUD.build/MBProgressHUD.m.o":
+    tool: clang
+    inputs: ["/Users/sergeikviatkovskii/MBProgressHUD/MBProgressHUD.m"]
+    outputs: ["/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/MBProgressHUD.build/MBProgressHUD.m.o"]
+    description: "Compiling MBProgressHUD MBProgressHUD.m"
+    args: ["/Volumes/Samsung_X5/New Xcodes/Xcode-12_4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","x86_64-apple-macosx10.10","-isysroot","/Volumes/Samsung_X5/New Xcodes/Xcode-12_4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk","-F","/Volumes/Samsung_X5/New Xcodes/Xcode-12_4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-g","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=MBProgressHUD","-I","/Users/sergeikviatkovskii/MBProgressHUD/include","-fmodules-cache-path=/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/ModuleCache","-MD","-MT","dependencies","-MF","/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/MBProgressHUD.build/MBProgressHUD.m.d","-c","/Users/sergeikviatkovskii/MBProgressHUD/MBProgressHUD.m","-o","/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/MBProgressHUD.build/MBProgressHUD.m.o"]
+    deps: "/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/MBProgressHUD.build/MBProgressHUD.m.d"
+
+  "<MBProgressHUD-debug.module>":
+    tool: phony
+    inputs: ["/Users/sergeikviatkovskii/MBProgressHUD/.build/x86_64-apple-macosx/debug/MBProgressHUD.build/MBProgressHUD.m.o"]
+    outputs: ["<MBProgressHUD-debug.module>"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/sergeikviatkovskii/MBProgressHUD/","/Users/sergeikviatkovskii/MBProgressHUD/Package.swift","/Users/sergeikviatkovskii/MBProgressHUD/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
